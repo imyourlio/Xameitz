@@ -1,3 +1,12 @@
+--[[
+    Fluent Interface Suite
+    This script is not intended to be modified.
+    To view the source code, see the 'src' folder on GitHub!
+
+    Author: dawid
+    License: MIT
+    GitHub: https://github.com/dawid-scripts/Fluent
+--]]
 local a, b = {
     {
         1,
@@ -1439,10 +1448,8 @@ local aa = {
                 {},
                 e(h),
                 function(o, p, q, r)
-                    local s = {
-                        Callback = r or function()
-                            end
-                    }
+                    local s = {Callback = r or function()
+                            end}
                     s.Frame =
                         l(
                         "TextButton",
@@ -1580,15 +1587,9 @@ local aa = {
                     p.Window:Dialog {
                         Title = "Close",
                         Content = "Are you sure you want to unload the interface?",
-                        Buttons = {
-                            {
-                                Title = "Yes",
-                                Callback = function()
+                        Buttons = {{Title = "Yes", Callback = function()
                                     p:Destroy()
-                                end
-                            },
-                            {Title = "No"}
-                        }
+                                end}, {Title = "No"}}
                     }
                 end
             )
@@ -3058,7 +3059,7 @@ local aa = {
             return l
         end
         return g
-         end, 
+        end,
     [23] = function()
         local aa, ab, ac, ad, ae = b(23)
         local af = ab.Parent.Parent
@@ -3355,15 +3356,8 @@ local aa = {
             assert(f.Max, "Slider - Missing maximum value.")
             assert(f.Rounding, "Slider - Missing rounding value.")
             local h, i, j =
-                {
-                    Value = nil,
-                    Min = f.Min,
-                    Max = f.Max,
-                    Rounding = f.Rounding,
-                    Callback = f.Callback or function(h)
-                        end,
-                    Type = "Slider"
-                },
+                {Value = nil, Min = f.Min, Max = f.Max, Rounding = f.Rounding, Callback = f.Callback or function(h)
+                        end, Type = "Slider"},
                 false,
                 ac(aj.Element)(f.Title, f.Description, d.Container, false)
             j.DescLabel.Size = UDim2.new(1, -170, 0, 14)
@@ -3487,14 +3481,8 @@ local aa = {
         function c.New(d, e, f)
             local g = d.Library
             assert(f.Title, "Toggle - Missing Title")
-            local h, i =
-                {
-                    Value = f.Default or false,
-                    Callback = f.Callback or function(h)
-                        end,
-                    Type = "Toggle"
-                },
-                ac(aj.Element)(f.Title, f.Description, d.Container, true)
+            local h, i = {Value = f.Default or false, Callback = f.Callback or function(h)
+                        end, Type = "Toggle"}, ac(aj.Element)(f.Title, f.Description, d.Container, true)
             i.DescLabel.Size = UDim2.new(1, -54, 0, 14)
             h.SetTitle = i.SetTitle
             h.SetDesc = i.SetDesc
@@ -5336,15 +5324,13 @@ do
                 c.resume(m, ...)
                 return m
             end, "0.0.0-venv", {}, {}, {}, {}, {}, {}
-    local y, z = {
-            GetChildren = function(y)
+    local y, z = {GetChildren = function(y)
                 local z, A = x[y], {}
                 for B in ag, z do
                     l(A, B)
                 end
                 return A
-            end,
-            FindFirstChild = function(y, z)
+            end, FindFirstChild = function(y, z)
                 if not z then
                     ad("Argument 1 missing or nil", 2)
                 end
@@ -5354,17 +5340,14 @@ do
                     end
                 end
                 return
-            end,
-            GetFullName = function(y)
+            end, GetFullName = function(y)
                 local z, A = y.Name, y.Parent
                 while A do
                     z = A.Name .. "." .. z
                     A = A.Parent
                 end
                 return "VirtualEnv." .. z
-            end
-        },
-        {}
+            end}, {}
     for A, B in ag, y do
         z[A] = function(C, ...)
             if not x[C] then
@@ -5486,21 +5469,11 @@ do
         if not M then
             return
         end
-        local N, O, P, Q, R, S, T =
-            false,
-            n {
-                Version = p,
-                Script = e,
-                Shared = w,
-                GetScript = function()
+        local N, O, P, Q, R, S, T = false, n {Version = p, Script = e, Shared = w, GetScript = function()
                     return e
-                end,
-                GetShared = function()
+                end, GetShared = function()
                     return w
-                end
-            },
-            L,
-            function(N, ...)
+                end}, L, function(N, ...)
                 if x[N] and N.ClassName == "ModuleScript" and t[N] then
                     return J(N)
                 end
@@ -5545,8 +5518,7 @@ do
             S =
                 ac(
                 {},
-                {
-                    __index = function(X, Y)
+                {__index = function(X, Y)
                         local Z = k(S, Y)
                         if Z ~= nil then
                             return Z
@@ -5556,8 +5528,7 @@ do
                             return _
                         end
                         return R[Y]
-                    end
-                }
+                    end}
             )
             j(M, S)
             N = true
