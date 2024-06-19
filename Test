@@ -2629,15 +2629,15 @@ local aa = {
     [22] = function()
         local aa, ab, ac, ad, ae = b(22)
         local af, ag, ah, ai, aj =
-            game:GetService "TweenService",
-            game:GetService "UserInputService",
-            game:GetService "Players".LocalPlayer:GetMouse(),
-            game:GetService "Workspace".CurrentCamera,
+            game "TweenService",
+            game "UserInputService",
+            game "Players".LocalPlayer(),
+            game "Workspace".CurrentCamera,
             ab.Parent.Parent
         local c, d = ac(aj.Creator), ac(aj.Packages.Flipper)
         local e, f, g = c.New, aj.Components, {}
         g.__index = g
-        g.__type = "Dropdown"
+        g.__type = "l"
         function g.New(h, i, j)
             local k, l, m =
                 h.Library,
@@ -2647,7 +2647,7 @@ local aa = {
                     Multi = j.Multi,
                     Buttons = {},
                     Opened = false,
-                    Type = "Dropdown",
+                    Type = "l",
                     Callback = j.Callback or function()
                         end
                 },
@@ -2697,7 +2697,7 @@ local aa = {
                         AnchorPoint = Vector2.new(1, 0.5),
                         BackgroundTransparency = 0.9,
                         Parent = m.Frame,
-                        ThemeTag = {BackgroundColor3 = "DropdownFrame"}
+                        ThemeTag = {BackgroundColor3 = "lFrame"}
                     },
                     {
                         e("UICorner", {CornerRadius = UDim.new(0, 5)}),
@@ -2735,14 +2735,11 @@ local aa = {
             local u =
                 e(
                 "Frame",
-                {Size = UDim2.fromScale(1, 0.6), ThemeTag = {BackgroundColor3 = "DropdownHolder"}},
+                {Size = UDim2.fromScale(1, 0.6), ThemeTag = {BackgroundColor3 = "lHolder"}},
                 {
                     t,
                     e("UICorner", {CornerRadius = UDim.new(0, 7)}),
-                    e(
-                        "UIStroke",
-                        {ApplyStrokeMode = Enum.ApplyStrokeMode.Border, ThemeTag = {Color = "DropdownBorder"}}
-                    ),
+                    e("UIStroke", {ApplyStrokeMode = Enum.ApplyStrokeMode.Border, ThemeTag = {Color = "lBorder"}}),
                     e(
                         "ImageLabel",
                         {
@@ -2783,11 +2780,11 @@ local aa = {
                 end
             w()
             y()
-            c.AddSignal(p:GetPropertyChangedSignal "AbsolutePosition", w)
+            c.AddSignal(p "AbsolutePosition", w)
             c.AddSignal(
                 p.MouseButton1Click,
                 function()
-                    l:Open()
+                    l()
                 end
             )
             c.AddSignal(
@@ -2796,7 +2793,7 @@ local aa = {
                     if A.UserInputType == Enum.UserInputType.MouseButton1 or A.UserInputType == Enum.UserInputType.Touch then
                         local B, C = u.AbsolutePosition, u.AbsoluteSize
                         if ah.X < B.X or ah.X > B.X + C.X or ah.Y < (B.Y - 20 - 1) or ah.Y > B.Y + C.Y then
-                            l:Close()
+                            l()
                         end
                     end
                 end
@@ -2806,11 +2803,7 @@ local aa = {
                 l.Opened = true
                 A.ScrollingEnabled = false
                 v.Visible = true
-                af:Create(
-                    u,
-                    TweenInfo.new(0.2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out),
-                    {Size = UDim2.fromScale(1, 1)}
-                ):Play()
+                af(u, TweenInfo.new(0.2, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Size = UDim2.fromScale(1, 1)})()
             end
             function l.Close(B)
                 l.Opened = false
@@ -2826,7 +2819,7 @@ local aa = {
                             D = D .. F .. ", "
                         end
                     end
-                    D = D:sub(1, #D - 2)
+                    D = D(1, #D - 2)
                 else
                     D = l.Value or ""
                 end
@@ -2843,11 +2836,11 @@ local aa = {
                     return l.Value and 1 or 0
                 end
             end
-            function l.BuildDropdownList(B)
+            function l.BuildlList(B)
                 local C, D = l.Values, {}
-                for E, F in next, t:GetChildren() do
-                    if not F:IsA "UIListLayout" then
-                        F:Destroy()
+                for E, F in next, t() do
+                    if not F "UIListLayout" then
+                        F()
                     end
                 end
                 local G = 0
@@ -2892,7 +2885,7 @@ local aa = {
                             ZIndex = 23,
                             Text = "",
                             Parent = t,
-                            ThemeTag = {BackgroundColor3 = "DropdownOption"}
+                            ThemeTag = {BackgroundColor3 = "lOption"}
                         },
                         {K, L, e("UICorner", {CornerRadius = UDim.new(0, 6)})}
                     ))
@@ -2904,7 +2897,7 @@ local aa = {
                     local O, P = c.SpringMotor(1, M, "BackgroundTransparency")
                     local Q, R = c.SpringMotor(1, K, "BackgroundTransparency")
                     local S = d.SingleMotor.new(6)
-                    S:onStep(
+                    S(
                         function(T)
                             K.Size = UDim2.new(0, 4, 0, T)
                         end
@@ -2943,17 +2936,14 @@ local aa = {
                             N = l.Value == I
                             P(N and 0.89 or 1)
                         end
-                        S:setGoal(d.Spring.new(N and 14 or 6, {frequency = 6}))
+                        S(d.Spring.new(N and 14 or 6, {frequency = 6}))
                         R(N and 0 or 1)
                     end
-                    L.InputBegan:Connect(
+                    L.InputBegan(
                         function(T)
-                            if
-                                T.UserInputType == Enum.UserInputType.MouseButton1 or
-                                    T.UserInputType == Enum.UserInputType.Touch
-                             then
+                            if T.UserInputType == Enum.UserInputType.MouseButton1 or T.UserInputType == Enum.UserInputType.Touch then
                                 local U = not N
-                                if l:GetActiveValues() == 1 and not U and not j.AllowNull then
+                                if l() == 1 and not U and not j.AllowNull then
                                 else
                                     if j.Multi then
                                         N = U
@@ -2962,19 +2952,19 @@ local aa = {
                                         N = U
                                         l.Value = N and I or nil
                                         for V, W in next, D do
-                                            W:UpdateButton()
+                                            W()
                                         end
                                     end
-                                    J:UpdateButton()
-                                    l:Display()
-                                    k:SafeCallback(l.Callback, l.Value)
-                                    k:SafeCallback(l.Changed, l.Value)
+                                    J()
+                                    l()
+                                    k(l.Callback, l.Value)
+                                    k(l.Changed, l.Value)
                                 end
                             end
                         end
                     )
-                    J:UpdateButton()
-                    l:Display()
+                    J()
+                    l()
                     D[M] = J
                 end
                 x = 0
@@ -2993,7 +2983,7 @@ local aa = {
                 if C then
                     l.Values = C
                 end
-                l:BuildDropdownList()
+                l()
             end
             function l.OnChanged(B, C)
                 l.Changed = C
@@ -3015,15 +3005,24 @@ local aa = {
                         l.Value = C
                     end
                 end
-                l:BuildDropdownList()
-                k:SafeCallback(l.Callback, l.Value)
-                k:SafeCallback(l.Changed, l.Value)
+                l()
+                k(l.Callback, l.Value)
+                k(l.Changed, l.Value)
+            end
+            function l.Clear(B)
+                l.Values = {}
+                l()
+            end
+            function g.Add(option)
+                    table.insert(l.Values, option)
+                    l:BuildlList() 
+                    l:Display()
             end
             function l.Destroy(B)
                 m:Destroy()
                 k.Options[i] = nil
             end
-            l:BuildDropdownList()
+            l:BuildlList()
             l:Display()
             local B = {}
             if type(j.Default) == "string" then
@@ -3053,14 +3052,14 @@ local aa = {
                         break
                     end
                 end
-                l:BuildDropdownList()
+                l:BuildlList()
                 l:Display()
             end
             k.Options[i] = l
             return l
         end
         return g
-    end,
+        end,
     [23] = function()
         local aa, ab, ac, ad, ae = b(23)
         local af = ab.Parent.Parent
