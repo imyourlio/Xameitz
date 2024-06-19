@@ -3009,11 +3009,11 @@ local aa = {
                 k(l.Callback, l.Value)
                 k(l.Changed, l.Value)
             end
-            function l.Clear(B)
+            function l:Clear(B)
                 l.Values = {}
                 l()
             end
-            function g.Add(option)
+            function g:Add(option)
                     table.insert(l.Values, option)
                     l:BuildlList() 
                     l:Display()
