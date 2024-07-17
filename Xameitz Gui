@@ -1961,13 +1961,13 @@ return function(Config)
 				SortOrder = Enum.SortOrder.LayoutOrder,
 			}),
 			New("ImageLabel", {
-				Size = UDim2.new(0.85,0,1,0),
+				Size = UDim2.fromScale(0, 1),
 				AutomaticSize = Enum.AutomaticSize.X,
 				BackgroundTransparency = 0,
 			}),
 			New("TextLabel", {
 				RichText = true,
-				Text = Config.Title,
+				Text = Config.SubTitle,
 				TextTransparency = 0.4,
 				FontFace = Font.new(
 					"rbxasset://fonts/families/GothamSSm.json",
