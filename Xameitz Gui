@@ -1960,7 +1960,7 @@ return function(Config)
 				FillDirection = Enum.FillDirection.Horizontal,
 				SortOrder = Enum.SortOrder.LayoutOrder,
 			}),
-			New("TextLabel", {
+			New("ImageLabel", {
 				RichText = true,
 				Text = Config.Title,
 				FontFace = Font.new(
@@ -2363,7 +2363,7 @@ return function(Config)
 		local Dialog = DialogModule:Create()
 		Dialog.Title.Text = Config.Title
 
-		local Content = New("ImageLabel", {
+		local Content = New("TextLabel", {
 			FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json"),
 			Text = Config.Content,
 			TextColor3 = Color3.fromRGB(240, 240, 240),
