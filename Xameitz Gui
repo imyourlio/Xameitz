@@ -1962,6 +1962,7 @@ return function(Config)
 			}),
 			New("ImageLabel", {
 				RichText = true,
+				Text = "",
 				FontFace = Font.new(
 					"rbxasset://fonts/families/GothamSSm.json",
 					Enum.FontWeight.Regular,
