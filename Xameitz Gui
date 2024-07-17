@@ -2366,7 +2366,7 @@ return function(Config)
 		local Content = New("TextLabel", {
 			FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json"),
 			Text = Config.Content,
-			TextColor3 = Color3.fromRGB(240, 240, 240),
+			TextColor3 = Color3.fromRGB(10,2,40),
 			TextSize = 14,
 			TextXAlignment = Enum.TextXAlignment.Left,
 			TextYAlignment = Enum.TextYAlignment.Top,
