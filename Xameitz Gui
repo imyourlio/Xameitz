@@ -1963,7 +1963,7 @@ return function(Config)
 			New("ImageLabel", {
 				Size = UDim2.new(30,30,30),
 				AutomaticSize = Enum.AutomaticSize.X,
-				BackgroundTransparency = 1,
+				BackgroundTransparency = 0,
 			}),
 			New("TextLabel", {
 				RichText = true,
