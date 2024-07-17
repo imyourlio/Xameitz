@@ -1957,12 +1957,12 @@ return function(Config)
 		}, {
 			New("UIListLayout", {
 				Padding = UDim.new(0.085,0,1,0),
-                Image = "rbxassetid://17799607839",
 				FillDirection = Enum.FillDirection.Horizontal,
 				SortOrder = Enum.SortOrder.LayoutOrder,
 			}),
 			New("ImageLabel", {
 				Size = UDim2.new(30,30,30),
+                Image = "rbxassetid://17799607839",
 				AutomaticSize = Enum.AutomaticSize.X,
 				BackgroundTransparency = 1,
 				ThemeTag = {
