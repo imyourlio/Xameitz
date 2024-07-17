@@ -1962,21 +1962,9 @@ return function(Config)
 			}),
 			New("ImageLabel", {
 				RichText = true,
-				Text = Config.Title,
-				FontFace = Font.new(
-					"rbxasset://fonts/families/GothamSSm.json",
-					Enum.FontWeight.Regular,
-					Enum.FontStyle.Normal
-				),
-				TextSize = 12,
-				TextXAlignment = "Left",
-				TextYAlignment = "Center",
 				Size = UDim2.fromScale(0, 1),
 				AutomaticSize = Enum.AutomaticSize.X,
-				BackgroundTransparency = 1,
-				ThemeTag = {
-					TextColor3 = "Text",
-				},
+				BackgroundTransparency = 0,
 			}),
 			New("TextLabel", {
 				RichText = true,
