@@ -1964,7 +1964,7 @@ return function(Config)
 				Size = UDim2.new(0.085,0,1,0),
                 Image = "rbxassetid://17799607839",
 				AutomaticSize = Enum.AutomaticSize.X,
-				BackgroundTransparency = 0,
+				BackgroundTransparency = 1,
 			}),
 			New("TextLabel", {
 				RichText = true,
