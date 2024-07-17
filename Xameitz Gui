@@ -1969,7 +1969,6 @@ return function(Config)
 			New("TextLabel", {
 				RichText = true,
 				Text = Config.SubTitle,
-				TextTransparency = 0.4,
 				FontFace = Font.new(
 					"rbxasset://fonts/families/GothamSSm.json",
 					Enum.FontWeight.Regular,
