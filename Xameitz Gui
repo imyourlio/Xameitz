@@ -1952,7 +1952,7 @@ return function(Config)
 	}, {
 		New("Frame", {
 			Size = UDim2.new(1, -16, 1, 0),
-			Position = UDim2.new(0, 16, 0, 0),
+			Position = UDim2.new(0, 0, 0, 0),
 			BackgroundTransparency = 1,
 		}, {
 			New("UIListLayout", {
@@ -1994,30 +1994,6 @@ return function(Config)
 			},
 		}),
 	})
-
-	TitleBar.CloseButton = BarButton(Assets.Close, UDim2.new(1, -4, 0, 4), TitleBar.Frame, function()
-		Library.Window:Dialog({
-			Title = "Close",
-			Content = "Are you sure you want to unload the interface?",
-			Buttons = {
-				{
-					Title = "Yes",
-					Callback = function()
-						Library:Destroy()
-					end,
-				},
-				{
-					Title = "No",
-				},
-			},
-		})
-	end)
-	TitleBar.MaxButton = BarButton(Assets.Max, UDim2.new(1, -40, 0, 4), TitleBar.Frame, function()
-		Config.Window.Maximize(not Config.Window.Maximized)
-	end)
-	TitleBar.MinButton = BarButton(Assets.Min, UDim2.new(1, -80, 0, 4), TitleBar.Frame, function()
-		Library.Window:Minimize()
-	end)
 
 	return TitleBar
 end
