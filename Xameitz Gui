@@ -1635,7 +1635,7 @@ function TabModule:New(Title, Icon, Parent)
 				Enum.FontWeight.Regular,
 				Enum.FontStyle.Normal
 			),
-			TextSize = 14,
+			TextSize = 15,
 			TextXAlignment = "Left",
 			TextYAlignment = "Center",
 			Size = UDim2.new(1, -12, 1, 0),
@@ -3373,8 +3373,8 @@ function Element:New(Idx, Config)
 				Element:Destroy()
 			end
 		end
+        chache = {}
 		DropdownDisplay.Text = ""
-		chache = {}
 		Dropdown:Close()
 		RecalculateCanvasSize()
 		RecalculateListSize()
@@ -3560,9 +3560,6 @@ function Element:New(Idx, Config)
 		
 		Dropdown:BuildDropdownList()
 		Dropdown:BuildDropdownList()
-		DropdownDisplay.Text = ""
-		
-		
 		RecalculateCanvasSize()
 		RecalculateListSize()
 	end
