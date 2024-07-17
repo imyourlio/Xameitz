@@ -1964,9 +1964,6 @@ return function(Config)
 				Size = UDim2.new(30,30,30),
 				AutomaticSize = Enum.AutomaticSize.X,
 				BackgroundTransparency = 1,
-				ThemeTag = {
-					TextColor3 = "Text",
-				},
 			}),
 			New("TextLabel", {
 				RichText = true,
