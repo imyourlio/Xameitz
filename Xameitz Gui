@@ -1956,7 +1956,7 @@ return function(Config)
 			BackgroundTransparency = 1,
 		}, {
 			New("UIListLayout", {
-				Padding = UDim.new(0.085,0,1,0),
+				Padding = UDim.new(0, 5),
 				FillDirection = Enum.FillDirection.Horizontal,
 				SortOrder = Enum.SortOrder.LayoutOrder,
 			}),
