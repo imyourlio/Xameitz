@@ -2363,10 +2363,10 @@ return function(Config)
 		local Dialog = DialogModule:Create()
 		Dialog.Title.Text = Config.Title
 
-		local Content = New("TextLabel", {
+		local Content = New("ImageLabel", {
 			FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json"),
 			Text = Config.Content,
-			TextColor3 = Color3.fromRGB(10,2,40),
+			TextColor3 = Color3.fromRGB(240, 240, 240),
 			TextSize = 14,
 			TextXAlignment = Enum.TextXAlignment.Left,
 			TextYAlignment = Enum.TextYAlignment.Top,
