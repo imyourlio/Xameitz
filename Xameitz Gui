@@ -1,8 +1,10 @@
+--[[local UserInputService = game:GetService("UserInputService")
+if UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled then
+   
+end]]
 
--- Will be used later for getting flattened globals
 local ImportGlobals
 
--- Holds the actual DOM data
 local ObjectTree = {
     {
         1,
@@ -1974,7 +1976,7 @@ return function(Config)
 					Enum.FontWeight.Regular,
 					Enum.FontStyle.Normal
 				),
-				TextSize = 18,
+				TextSize = 15,
 				TextXAlignment = "Left",
 				TextYAlignment = "Center",
 				Size = UDim2.fromScale(0, 1),
