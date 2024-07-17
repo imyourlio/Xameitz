@@ -1960,7 +1960,7 @@ return function(Config)
 				FillDirection = Enum.FillDirection.Horizontal,
 				SortOrder = Enum.SortOrder.LayoutOrder,
 			}),
-			New("ImageLabel", {
+			New("TextLabel", {
 				RichText = true,
 				Text = "",
 				FontFace = Font.new(
