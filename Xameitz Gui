@@ -3588,7 +3588,6 @@ function Element:New(Idx, Config)
 	
 	function Dropdown:Add(args)
 		if args then
-            chache = {}
 			table.insert(chache,args)
 			Dropdown.Values = chache
 			DropdownDisplay.Text = ""
