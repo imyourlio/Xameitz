@@ -2002,7 +2002,9 @@ return function(Config)
 				BackgroundTransparency = 1,
 				ThemeTag = {
 					TextColor3 = "Text",
-				},
+				}, New("UIGradient",{
+					Color = ColorSequenceKeypoint.new(0, Color3.fromRGB(71, 43, 147)),ColorSequenceKeypoint.new(1, Color3.fromRGB(111, 50, 147))
+				})
 			}),
 		}),
 		New("Frame", {
