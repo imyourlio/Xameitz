@@ -785,13 +785,12 @@ return function(props)
 			CornerRadius = UDim.new(0, 8),
 		}),
 
-		New("Frame", {
-			BackgroundTransparency = 0.45,
+		New("ImageLabel", {
+			BackgroundTransparency = 1,
+			ImageTransparency = 0,
 			Size = UDim2.fromScale(1, 1),
 			Name = "Background",
-			ThemeTag = {
-				BackgroundColor3 = "AcrylicMain",
-			},
+            Image = "rbxassetid://18549970896"
 		}, {
 			New("UICorner", {
 				CornerRadius = UDim.new(0, 8),
