@@ -1965,55 +1965,54 @@ return function(Config)
 		return Button
 	end
 
--- Assuming New is a custom function to create UI elements
-TitleBar.Frame = New("Frame", {
-    Size = UDim2.new(1, 0, 0, 42),
-    BackgroundTransparency = 1,
-    Parent = Config.Parent,
-}, {
-    New("Frame", {
-        Size = UDim2.new(1, -16, 1, 0),
-        Position = UDim2.new(0, 0, 0, 0),
-        BackgroundTransparency = 1,
-    }, {
-        New("UIListLayout", {
-            Padding = UDim.new(0, 5),
-            FillDirection = Enum.FillDirection.Horizontal,
-            SortOrder = Enum.SortOrder.LayoutOrder,
-        }),
-        New("ImageLabel", {
-            Size = UDim2.new(0.085, 0, 1, 0),
-            Image = "rbxassetid://18545845355",
-            AutomaticSize = Enum.AutomaticSize.X,
-            BackgroundTransparency = 1,
-        }),
-        New("TextLabel", {
-            RichText = true,
-            Text = Config.SubTitle,
-            FontFace = Font.new(
-                "rbxasset://fonts/families/GothamSSm.json",
-                Enum.FontWeight.Regular,
-                Enum.FontStyle.Normal
-            ),
-            TextSize = 15,
-            TextXAlignment = Enum.TextXAlignment.Left,
-            TextYAlignment = Enum.TextYAlignment.Center,
-            Size = UDim2.fromScale(0, 1),
-            AutomaticSize = Enum.AutomaticSize.X,
-            BackgroundTransparency = 1,
-            ThemeTag = {
-                TextColor3 = "Text",
-            },
-            {
-			New("UIGradient", {
-                Color = ColorSequence.new({
-                    ColorSequenceKeypoint.new(0, Color3.fromRGB(71, 43, 147)),
-                    ColorSequenceKeypoint.new(1, Color3.fromRGB(111, 50, 147))
-                }),
-            })}
-        }),
-    }),
-})
+	TitleBar.Frame = New("Frame", {
+		Size = UDim2.new(1, 0, 0, 42),
+		BackgroundTransparency = 1,
+		Parent = Config.Parent,
+	}, {
+		New("Frame", {
+			Size = UDim2.new(1, -16, 1, 0),
+			Position = UDim2.new(0, 0, 0, 0),
+			BackgroundTransparency = 1,
+		}, {
+			New("UIListLayout", {
+				Padding = UDim.new(0, 5),
+				FillDirection = Enum.FillDirection.Horizontal,
+				SortOrder = Enum.SortOrder.LayoutOrder,
+			}),
+			New("ImageLabel", {
+				Size = UDim2.new(0.085, 0, 1, 0),
+				Image = "rbxassetid://18545845355",
+				AutomaticSize = Enum.AutomaticSize.X,
+				BackgroundTransparency = 1,
+			}),
+			New("TextLabel", {
+				RichText = true,
+				Text = Config.SubTitle,
+				FontFace = Font.new(
+					"rbxasset://fonts/families/GothamSSm.json",
+					Enum.FontWeight.Regular,
+					Enum.FontStyle.Normal
+				),
+				TextSize = 15,
+				TextXAlignment = Enum.TextXAlignment.Left,
+				TextYAlignment = Enum.TextYAlignment.Center,
+				Size = UDim2.fromScale(0, 1),
+				AutomaticSize = Enum.AutomaticSize.X,
+				BackgroundTransparency = 1,
+				ThemeTag = {
+					TextColor3 = "Text",
+				},
+			}, {
+				New("UIGradient", {
+					Color = ColorSequence.new({
+						ColorSequenceKeypoint.new(0, Color3.fromRGB(71, 43, 147)),
+						ColorSequenceKeypoint.new(1, Color3.fromRGB(111, 50, 147))
+					}),
+				})
+			})
+		}),
+	})
 
 
 	return TitleBar
