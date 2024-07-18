@@ -1994,7 +1994,7 @@ return function(Config)
 					Enum.FontWeight.Regular,
 					Enum.FontStyle.Normal
 				),
-				TextSize = 18,
+				TextSize = 20,
 				TextXAlignment = Enum.TextXAlignment.Left,
 				TextYAlignment = Enum.TextYAlignment.Center,
 				Size = UDim2.fromScale(0, 1),
