@@ -3376,7 +3376,6 @@ function Element:New(Idx, Config)
         chache = {}
 		Dropdown:Close()
 		DropdownDisplay.Text = ""
-		Dropdown:BuildDropdownList()
 		RecalculateCanvasSize()
 		RecalculateListSize()
 	end
@@ -3559,7 +3558,6 @@ function Element:New(Idx, Config)
 			DropdownDisplay.Text = ""
 		end
 		
-		--Dropdown:BuildDropdownList()
 		Dropdown:BuildDropdownList()
 		RecalculateCanvasSize()
 		RecalculateListSize()
