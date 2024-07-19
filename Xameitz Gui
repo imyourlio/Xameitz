@@ -1,8 +1,3 @@
---[[local UserInputService = game:GetService("UserInputService")
-if UserInputService.TouchEnabled and not UserInputService.KeyboardEnabled then
-   
-end]]
-
 local ScreenGui = Instance.new("ScreenGui")
 local ImageButton = Instance.new("ImageButton")
 local UICorner = Instance.new("UICorner")
